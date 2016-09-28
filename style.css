@@ -5,13 +5,21 @@ body {
 	background-color: #C9372E;
 	height: 2em;  
 	width:100%;
-
+	border-radius: 25px 25px 0px 0px;
+}
+#foot{
+	position:relative;
+	bottom:0px;
+	background-color: #2CC5F8;
+	height: 2em;  
+	width:100%;
+	border-radius: 0px 0px 25px 25px;
 }
 #wrapper {
 	width: 80%;
-	height: 100%;
 	margin: 0 auto;
 	background-color: #2CC5F8;
+	border-radius: 25px 25px 25px 25px;
 }
 #break{
 	width:100%;
@@ -26,13 +34,19 @@ body {
 	padding: 20px;
 }
 .menuitem{
-	width: 19%;
+	width: 15%;
 	float:left;
-	height: 2em;
-	padding-left: 5px;
+	height: 1.5em;
+	margin-top:.25em;
+	margin-left:2.3%;
+	margin-right:2.3%;
 	text-align:center;
 	vertical-align:middle;
-	line-height:2em;
+	line-height:1.5em;
+	border-radius:20px;
+	border-style:solid;
+	border-color:#fff;
+	border-width:1px;
 }
 #logo{
 	float:left;
