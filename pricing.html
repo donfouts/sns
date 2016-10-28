@@ -19,6 +19,16 @@
 <i class="material-icons">filter_3</i> are included in the Elementrary package and are around grades 3-5
 <br> <i class="material-icons">filter_5</i> are included in the Intermediate package and might be taught in grades 5-8</p>
 <!-- lessons start here -->
+<?php 
+$dir = '/lessons';
+$folders = scandir($dir);
+
+foreach($folders as $x)
+	{
+echo "<div id='lesson'>$x</div>";
+	}
+
+
 	<div id="lesson">Place Value <i class="material-icons">filter_1</i></div>
 	<div id="lesson">Comparining & Ordering numbers 1,2,3,4 <i class="material-icons">filter_1</i></div>
 	<div id="lesson">Column addition<i class="material-icons">filter_1</i></div>

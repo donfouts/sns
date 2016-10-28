@@ -1,0 +1,100 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('visualization', '1.0', {packages:['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'incoming', 'outgoing'],
+          ['1', 345, 375],
+          ['2', 360, 395],
+          ['3', 338, 386],
+          ['4', 328, 382],
+	  ['5', 315, 375]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Average Math Scaled Scores',
+            subtitle: 'In all performance bands',
+          },
+          vAxis: {
+			  viewWindowMode:'explicit',
+			  viewWindow: { 
+				  min: 250,
+				  max: 400
+				  }
+			   },
+			bars: 'vertical',
+			height:500
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Segment', 'incoming', 'outgoing'],
+          ['Gifted and Talented', 421, 461],
+          ['English Only', 331, 379],
+          ['English learners', 310, 351],
+          ['Special education', 268, 313]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Five Year Average CST Math Performance Levels'
+
+          },
+          vAxis: {
+			  viewWindowMode:'explicit',
+			  viewWindow: { 
+				  min: 200,
+				  max: 500
+				  }
+			   },
+			bars: 'vertical',
+			height:500
+
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material2'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu">
+		<a href="index.html"><div class="menuitem">Home</div></a>
+		<a href="pricing.php"><div class="menuitem">Pricing</div></a>
+		<a href="trial.html"><div class="menuitem">Trial</div></a>
+		<a href="research.html"><div class="menuitem">Research</div></a>
+		<a href="about.html"><div class="menuitem">About</div></a>
+		
+	</div>
+	<div id="break">&nbsp;</div>
+	<div class="textbox">
+    <img id="logo" src="logo.png">
+		<div id="titlearea">
+		<h1>Research</h1>
+		</div>
+	<p>	Singin' & Signin' conducted over five years of testing - utilizing the standardized testing scores of teachers before they used Singin' & Signin' and after. Comparing the difference inside schools, districts, and the statewide, as well as across the different subgroups. All subgroups grew a significant amount across the board.</p>
+    <div id="columnchart_material"></div><P>Source: <i>California Report for Teachers</i></P>
+    <div id="columnchart_material2"></div>
+	</div>
+	<div id="break">&nbsp;</div>
+	<div id="foot">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#169; Singin' &amp; Signin' LLC, All Rights Reserved
+	</div>
+</div>
+</body>
+</html>
